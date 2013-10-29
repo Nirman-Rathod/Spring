@@ -1,7 +1,5 @@
 package com.spring.hibernate.controller;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +14,7 @@ import com.spring.hibernate.model.Department;
 import com.spring.hibernate.model.Employee;
 import com.spring.hibernate.service.IEmployeeService;
 
-@Controller
+@Controller("employeeController")
 public class EmployeeController {
 	private static final Logger LOG = LoggerFactory
 			.getLogger(EmployeeController.class);
@@ -24,10 +22,13 @@ public class EmployeeController {
 	@Autowired
 	IEmployeeService employeeService;
 
+	public void setEmployeeService(IEmployeeService employeeService) {
+		this.employeeService = employeeService;
+	}
+
 	@RequestMapping(value = "/employee", method = RequestMethod.POST)
 	@ResponseBody
-	String saveEmployee(@RequestBody Employee employee,
-			HttpServletResponse response) {
+	String saveEmployee(@RequestBody Employee employee) {
 		LOG.info("Request to save new employee empName:" + employee.getfName());
 		employeeService.saveEmployee(employee);
 		return "{\"data\":\"Employee saved successfully\"}";
@@ -56,9 +57,11 @@ public class EmployeeController {
 	@RequestMapping(value = "/employee/{empId}/dept/{deptId}", method = RequestMethod.GET)
 	@ResponseBody
 	Department getEmployeeDepartment(@PathVariable("empId") int empId,
-			@PathVariable("deptId") int deptId) {
+			@PathVariable("deptId") int deptId) throws Exception {
 		LOG.info("Request to get employee by ID:" + empId);
 		Department dept = employeeService.getEmployeeDept(empId, deptId);
+		if(dept == null)
+			throw new Exception("Department does not exist");
 		return dept;
 	}
 
@@ -127,4 +130,6 @@ public class EmployeeController {
 	String getempDetailsUpdatePage() {
 		return "empUpdtDetails";
 	}
+	
+	
 }
