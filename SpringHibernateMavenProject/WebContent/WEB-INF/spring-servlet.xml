@@ -58,7 +58,7 @@
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation">
-			<value>hibernate.cfg.xml</value>
+			<value>classpath:hibernate.cfg.xml</value>
 		</property>
 		<property name="configurationClass">
 			<value>org.hibernate.cfg.AnnotationConfiguration
