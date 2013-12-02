@@ -73,6 +73,7 @@ public class EmployeeControllerTest {
 	@Test(expected = Exception.class)
 	public void getEmployeeFailureTest() throws Exception {
 		when(mockDao.getEmployee(10)).thenReturn(null);
+		@SuppressWarnings("unused")
 		Employee emp = employeeController.getEmployee(10);
 	}
 
@@ -86,6 +87,7 @@ public class EmployeeControllerTest {
 	@Test(expected = Exception.class)
 	public void getEmployeeDeptFailureTest() throws Exception {
 		when(mockDao.getEmployeeDept(1, 10)).thenReturn(null);
+		@SuppressWarnings("unused")
 		Department dept = employeeController.getEmployeeDepartment(1, 10);
 	}
 
