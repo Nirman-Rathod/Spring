@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="true" monitoring="autodetect" dynamicConfig="true">
+	<!-- | Please see http://ehcache.sourceforge.net/documentation/configuration.html 
+		for | detailed information on how to configure caches in this file + -->
+
+	<cacheManagerPeerProviderFactory
+	class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+	properties="peerDiscovery=automatic, multicastGroupAddress=230.0.0.1,
+	multicastGroupPort=4446, timeToLive=32"/>
+
+	<cacheManagerPeerListenerFactory
+	class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+	properties="hostName=10.35.34.193, port=40001,
+	socketTimeoutMillis=2000" />
+
+	<cacheManagerPeerListenerFactory
+		class="org.terracotta.ehcachedx.monitor.probe.ProbePeerListenerFactory"
+		properties="monitorAddress=10.35.34.193, monitorPort=9889, memoryMeasurement=true" />
+
+	<cache name="employees" eternal="false" maxElementsInMemory="1000"
+		overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+		timeToLiveSeconds="500" memoryStoreEvictionPolicy="LRU" statistics="true">
+
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+			properties="replicateAsynchronously=true, replicatePuts=true, replicateUpdates=true,
+			replicateUpdatesViaCopy=true, replicateRemovals=true " />
+	</cache>
+
+	<!--Before going ahead to actual method please remember two things: A. 
+		Caching will not work on private methods of class.Make sure cacheable method 
+		is public. B. Caching will not work if try to call the cacheable method form 
+		same class as that of cacheable method. -->
+
+</ehcache>

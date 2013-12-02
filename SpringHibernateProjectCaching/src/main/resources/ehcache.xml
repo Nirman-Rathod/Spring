@@ -8,7 +8,7 @@
 	<cacheManagerPeerListenerFactory
 		class="org.terracotta.ehcachedx.monitor.probe.ProbePeerListenerFactory"
 		properties="monitorAddress=10.35.34.193, monitorPort=9889, memoryMeasurement=true" />
-
+		
 	<cache name="employees" eternal="false" maxElementsInMemory="1000"
 		overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
 		timeToLiveSeconds="500" memoryStoreEvictionPolicy="LRU" statistics="true">
