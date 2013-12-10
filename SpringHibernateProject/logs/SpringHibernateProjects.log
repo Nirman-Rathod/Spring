@@ -4094,3 +4094,98 @@ Product: Ehcache
 5188 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
 5349 [Thread-10] INFO  o.t.e.monitor.probe.ProbeDxService - Stopped probe for 10.35.34.193:64345
 5355 [Thread-10] INFO  o.hibernate.impl.SessionFactoryImpl - closing
+481  [main] INFO  o.h.annotations.common.Version - Hibernate Commons Annotations 3.2.0.Final
+504  [main] INFO  org.hibernate.cfg.Environment - Hibernate 3.6.10.Final
+507  [main] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+509  [main] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+512  [main] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+577  [main] INFO  org.hibernate.cfg.Configuration - configuring from url: file:/C:/Users/nirman/git/Spring/SpringHibernateProject/target/classes/hibernate.cfg.xml
+617  [main] WARN  o.hibernate.util.DTDEntityResolver - recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+655  [main] INFO  org.hibernate.cfg.Configuration - Configured SessionFactory: null
+693  [main] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.spring.hibernate.model.Employee
+731  [main] INFO  o.h.cfg.annotations.EntityBinder - Bind entity com.spring.hibernate.model.Employee on table employee
+793  [main] INFO  org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: com.spring.hibernate.model.Department
+793  [main] INFO  o.h.cfg.annotations.EntityBinder - Bind entity com.spring.hibernate.model.Department on table Department
+804  [main] INFO  org.hibernate.cfg.Configuration - Hibernate Validator not found: ignoring
+813  [main] INFO  o.h.c.s.HibernateSearchEventListenerRegister - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+817  [main] INFO  o.h.c.ConnectionProviderFactory - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+1305 [main] INFO  org.hibernate.dialect.Dialect - Using dialect: org.hibernate.dialect.MySQLDialect
+1316 [main] INFO  o.h.engine.jdbc.JdbcSupportLoader - Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+1316 [main] INFO  org.hibernate.cfg.SettingsFactory - Database ->
+       name : MySQL
+    version : 5.5.0-m2-community
+      major : 5
+      minor : 5
+1316 [main] INFO  org.hibernate.cfg.SettingsFactory - Driver ->
+       name : MySQL Connector Java
+    version : mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+1317 [main] INFO  o.h.t.TransactionFactoryFactory - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+1318 [main] INFO  o.h.t.TransactionManagerLookupFactory - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+1318 [main] INFO  org.hibernate.cfg.SettingsFactory - Automatic flush during beforeCompletion(): disabled
+1318 [main] INFO  org.hibernate.cfg.SettingsFactory - Automatic session close at end of transaction: disabled
+1318 [main] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch size: 15
+1318 [main] INFO  org.hibernate.cfg.SettingsFactory - JDBC batch updates for versioned data: disabled
+1319 [main] INFO  org.hibernate.cfg.SettingsFactory - Scrollable result sets: enabled
+1319 [main] INFO  org.hibernate.cfg.SettingsFactory - JDBC3 getGeneratedKeys(): enabled
+1319 [main] INFO  org.hibernate.cfg.SettingsFactory - Connection release mode: auto
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Maximum outer join fetch depth: 2
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Default batch fetch size: 1
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Generate SQL with comments: disabled
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Order SQL updates by primary key: disabled
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Order SQL inserts for batching: disabled
+1320 [main] INFO  org.hibernate.cfg.SettingsFactory - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+1322 [main] INFO  o.h.h.ast.ASTQueryTranslatorFactory - Using ASTQueryTranslatorFactory
+1322 [main] INFO  org.hibernate.cfg.SettingsFactory - Query language substitutions: {}
+1322 [main] INFO  org.hibernate.cfg.SettingsFactory - JPA-QL strict compliance: disabled
+1322 [main] INFO  org.hibernate.cfg.SettingsFactory - Second-level cache: enabled
+1322 [main] INFO  org.hibernate.cfg.SettingsFactory - Query cache: disabled
+1323 [main] INFO  org.hibernate.cfg.SettingsFactory - Cache region factory : org.hibernate.cache.impl.bridge.RegionFactoryCacheProviderBridge
+1327 [main] INFO  o.h.c.i.b.RegionFactoryCacheProviderBridge - Cache provider: org.hibernate.cache.NoCacheProvider
+1327 [main] INFO  org.hibernate.cfg.SettingsFactory - Optimize cache for minimal puts: disabled
+1328 [main] INFO  org.hibernate.cfg.SettingsFactory - Structured second-level cache entries: disabled
+1332 [main] INFO  org.hibernate.cfg.SettingsFactory - Echoing all SQL to stdout
+1333 [main] INFO  org.hibernate.cfg.SettingsFactory - Statistics: disabled
+1333 [main] INFO  org.hibernate.cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+1333 [main] INFO  org.hibernate.cfg.SettingsFactory - Default entity-mode: pojo
+1333 [main] INFO  org.hibernate.cfg.SettingsFactory - Named query checking : enabled
+1333 [main] INFO  org.hibernate.cfg.SettingsFactory - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+1352 [main] INFO  o.hibernate.impl.SessionFactoryImpl - building session factory
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [clob] overrides previous : org.hibernate.type.ClobType@26e4b27a
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@26e4b27a
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@70817b88
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@44d5576c
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [blob] overrides previous : org.hibernate.type.BlobType@125e96c2
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@125e96c2
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@7ffba3f9
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@61ca7213
+1358 [main] INFO  o.hibernate.type.BasicTypeRegistry - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@32076f8d
+1565 [main] INFO  o.h.i.SessionFactoryObjectFactory - Not binding factory to JNDI, no JNDI name configured
+1575 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - Running hbm2ddl schema export
+1576 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - exporting generated schema to database
+2808 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - schema export complete
+4160 [main] INFO  o.t.e.monitor.probe.ProbeDxService - Started probe at http://10.35.34.193:53618/monitor/list
+5178 [Thread-1] WARN  o.t.e.monitor.util.RestProxy - Error connecting to the server at address '10.35.34.193' and port '9889', retrying in 30 seconds ...
+5420 [main] INFO  c.s.h.controller.EmployeeController - Request to get employee by ID:1
+5420 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5424 [main] INFO  c.s.h.controller.EmployeeController - Request to get employee by ID:10
+5424 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5426 [main] INFO  c.s.h.controller.EmployeeController - Request to get employee by ID:1
+5426 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5427 [main] INFO  c.s.h.controller.EmployeeController - Request to get employee by ID:1
+5427 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5428 [main] INFO  c.s.h.controller.EmployeeController - Request to save new employee empName:John
+5429 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5436 [main] INFO  c.s.h.controller.EmployeeController - Request to save department for employee Id:1
+5436 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5438 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5438 [main] INFO  c.s.h.controller.EmployeeController - Request to update employee by ID: 1 New Employee request details: empName: John
+5439 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5439 [main] INFO  c.s.h.controller.EmployeeController - Request to update Department details for employee ID:1 New Department request details: deptName:IDM
+5440 [main] INFO  c.s.h.controller.EmployeeController - Request to delete employee by ID: 1 
+5440 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5442 [main] INFO  c.s.h.controller.EmployeeController - Request to delete department details for employee ID:1
+5442 [main] INFO  c.s.h.s.impl.EmployeeServiceImpl - In Service
+5549 [Thread-8] INFO  o.t.e.monitor.probe.ProbeDxService - Stopped probe for 10.35.34.193:53618
+5565 [Thread-8] INFO  o.hibernate.impl.SessionFactoryImpl - closing
