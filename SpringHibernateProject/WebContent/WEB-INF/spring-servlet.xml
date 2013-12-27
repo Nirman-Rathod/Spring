@@ -18,6 +18,7 @@
 	<context:component-scan base-package="com.spring.hibernate" />
 
 	<mvc:annotation-driven />
+	
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">
@@ -67,12 +68,14 @@
 			</value>
 		</property>
 	</bean>
+	
 	<tx:annotation-driven />
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-
+	
+	<!-- Enable cache annotations -->
 	<cache:annotation-driven />
 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"
 		p:cacheManager-ref="ehcache" />
