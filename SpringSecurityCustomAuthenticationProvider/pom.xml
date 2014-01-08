@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>SpringSecurity</groupId>
-	<artifactId>SpringSecurity1</artifactId>
+	<artifactId>SpringSecurity</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringSecurity1 Maven Webapp</name>
@@ -39,12 +39,6 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>3.2.0.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-openid</artifactId>
-			<version>3.2.0.RELEASE</version>
-		</dependency>
-
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
@@ -99,6 +93,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>SpringSecurity1</finalName>
+		<finalName>SpringSecurity</finalName>
 	</build>
 </project>
